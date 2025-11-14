@@ -20,7 +20,7 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get("/hello")
+@app.get("/hello") # /hello is the endpoint
 async def say_hello():
     return {"message": "Hello, World!!!"} # JSON
 
@@ -40,3 +40,9 @@ There are a few common ways to access it:
 3. Python: `requests.get("http://localhost:8000/hello")`
 
 
+## FastAPI Swagger UI
+
+FastAPI Swagger UI is an automatic web interface created by FastAPI, accessible at the `/docs` endpoint. It lets you explore, test, and document your API endpoints.
+
+* **Interactive docs** – Displays all endpoints with their methods (GET, POST, etc.), inputs, and outputs.
+* **Try endpoints** – Send requests directly from the browser, including parameters or JSON, and view responses immediately.
